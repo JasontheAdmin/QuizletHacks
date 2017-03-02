@@ -66,13 +66,64 @@ function learn() {
     setInterval(run, 100);
 }
 
+
+function simulateKeyPress(keycode) {
+    $().trigger({type: 'keypress', which: keycode, keyCode: keycode});
+}
+
+function flashcards() {
+    //
+    // play the Quizlet "Flashcards" game
+    //
+
+    function run() {
+	simulateKeyPress(38);
+	simulateKeyPress(39);
+    }
+    
+    setInterval(run, 100);
+}
+
+function test() {
+    //
+    // play the Quizlet "Test" game
+    //
+
+    function solve_written() {
+	// solve all written questions
+
+	
+    }
+    
+    function solve_matching() {
+	// solve all matching questions
+
+	
+    }
+
+    function solve_multiplechoice() {
+	// solve all multiple choice questions
+
+	
+    }
+
+    function solve_truefalse() {
+	// solve all true/false questions
+
+	
+    }
+
+    
+    
+}
+
 function hack(game) {
     switch(game) {
     case "learn":
 	learn();
 	break;
     case "flashcards":
-	//flashcards();
+	flashcards();
 	break;
     }
 }
